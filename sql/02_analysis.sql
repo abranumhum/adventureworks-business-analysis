@@ -36,7 +36,7 @@ SELECT
 FROM aw.fact_internet_sales f
 JOIN aw.dim_date d ON f.orderdatekey = d.datekey;
 
--- Analytical dimension: product + territory (denormalized for readability)
+-- Analytical product dimension (denormalized for readability)
 CREATE TABLE analytics.product_dim AS
 SELECT
     p.productkey,
